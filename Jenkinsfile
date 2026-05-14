@@ -4,12 +4,14 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+       stage('Checkout') {
 
-            steps {
-                git 'https://github.com/vinodr95131-png/RestAssuredAPIFramework.git'
-            }
-        }
+           steps {
+
+               git branch: 'main',
+               url: 'https://github.com/vinodr95131-png/RestAssuredAPIFramework.git'
+           }
+       }
 
         stage('Build & Test') {
 
